@@ -11,9 +11,13 @@ import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatIconModule} from '@angular/material/icon';
-
+import { MatIconModule } from '@angular/material/icon';
+import { BlogComponent } from './components/blog/blog.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselComponent } from './components/ui/carousel/carousel.component';
+import { LandingbodyComponent } from './components/ui/landingbody/landingbody.component'
 
 @NgModule({
   declarations: [
@@ -25,8 +29,18 @@ import {MatIconModule} from '@angular/material/icon';
     FooterComponent,
     AboutComponent,
     NavbarComponent,
+    BlogComponent,
+    CarouselComponent,
+    LandingbodyComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, MatIconModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
