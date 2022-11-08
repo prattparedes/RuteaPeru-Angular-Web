@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.nav__logo--wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 80px;
+  width: 160px;
+}
+
+.nav__logo {
+  object-fit: contain;
+  position: absolute;
+  top: -20px;
+  height: 120px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 750px;
+  min-width: 600px;
+}
+
+nav {
+  border-bottom: 2px solid var(--rutea-color);
+}
+
+.nav__link {
+  color: gray;
+  position: relative;
+  transition: font-weight 100ms ease-in-out;
+}
+
+.nav__link::before {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid var(--rutea-color);
+  left: 0;
+  right: 0;
+  opacity: 0;
+  top: 20px;
+  transform: scale(0);
+  transition: all 300ms ease-in-out;
+}
+
+.nav__link:hover {
+  color: var(--rutea-color);
+  font-weight: 600;
+}
+
+.nav__link:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav__cart {
+  color: var(--rutea-color);
+}
