@@ -60,3 +60,53 @@
 }
 
 
+/** Productos */
+#products {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__container {
+  display: flex;
+  background-color: rgba(4, 53, 122, 0.12);
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  height: 80%;
+  border: 1px solid var(--rutea-color);
+  overflow: hidden;
+}
+
+.products__description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 50%;
+}
+
+.products__description > p {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.products__grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.product {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--rutea-color);
+}
+
+.product > img {
+  object-fit: contain;
+  width: 100%;
+}
