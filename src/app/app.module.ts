@@ -17,7 +17,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { BlogComponent } from './components/blog/blog.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './components/ui/carousel/carousel.component';
-import { LandingbodyComponent } from './components/ui/landingbody/landingbody.component'
+import { LandingbodyComponent } from './components/ui/landingbody/landingbody.component';
+import { TravelPageComponent } from './components/travel-page/travel-page.component';
+import { MorePageComponent } from './components/more-page/more-page.component'
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { LandingbodyComponent } from './components/ui/landingbody/landingbody.co
     BlogComponent,
     CarouselComponent,
     LandingbodyComponent,
+    TravelPageComponent,
+    MorePageComponent,
   ],
   imports: [
     BrowserModule,

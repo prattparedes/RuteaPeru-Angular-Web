@@ -1,0 +1,149 @@
+#travel {
+  height: 200vh;
+  position: relative;
+}
+
+#travel::before {
+  content: "";
+  background-image: url(../../../assets/travelsBG.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.travel__header {
+  color: black;
+  padding: 20px;
+  max-width: 1200px;
+  padding-top: 60px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.travel__header > h3 {
+  max-width: 800px;
+  margin: 12px auto;
+}
+
+.travels {
+  height: 100vh;
+}
+
+.travel__location {
+  background-color: white;
+  width: 90%;
+}
+
+.travel__location--title {
+  margin-bottom: 12px;
+}
+
+.travel__location:hover .travel__img {
+  filter: brightness(1);
+}
+
+.travel__location:hover .travel__location--box {
+  opacity: 1;
+  filter: brightness(1);
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.travel__location--box {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  background-color: white;
+  filter: brightness(0.92);
+  opacity: 0.72;
+  bottom: 80px;
+  padding: 40px;
+  transition: all 200ms ease-in-out;
+}
+
+.box-right {
+  right: 40px;
+}
+
+.box-left {
+  left: 40px;
+}
+
+.travel__img--wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.travel__img {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  object-position: center;
+  filter: brightness(0.8);
+  transition: filter 200ms ease-in-out;
+}
+
+.travel__img--1 {
+  top: -80%;
+}
+
+.travel__img--2 {
+  top: -30%;
+}
+
+.travel__img--3 {
+  top: -90%;
+}
+
+.travel__location--description {
+  z-index: 10;
+}
+
+.travel__description--title {
+  margin: 0 20px 12px 20px;
+}
+
+.travel__location--para {
+  margin: 0 20px 12px 20px;
+  max-width: 50%;
+}
+
+/* accordeon */
+
+.travel__location--description {
+  height: 0;
+  padding: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.travel__location--description > a {
+    margin-left: 20px;
+}
+
+.active .travel__location--description {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  height: 200px;
+  opacity: 1;
+}

@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './components/blog/blog.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MorePageComponent } from './components/more-page/more-page.component';
 import { ProductsComponent } from './components/products/products.component';
+import { TravelPageComponent } from './components/travel-page/travel-page.component';
 
 const routes: Routes = [
-  { path: '**', component: HeaderComponent },
   { path: 'home', component: HeaderComponent },
-  { path: 'travel', component: HeaderComponent },
-  { path: 'more', component: HeaderComponent },
+  { path: 'travel', component: TravelPageComponent },
+  { path: 'more', component: MorePageComponent },
   { path: 'blog', component:  BlogComponent},
   { path: 'store', component: ProductsComponent },
+  { path: '**', component: HeaderComponent },
 ];
 
 @NgModule({
