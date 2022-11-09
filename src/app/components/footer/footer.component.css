@@ -24,3 +24,12 @@ a {
 .container > p {
   margin-top: 20px;
 }
+
+.footer__list {
+  display: flex;
+  width: 100%;
+}
+
+.footer__list > li {
+  margin: 0 20px;
+}
