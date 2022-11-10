@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { ProductsService } from 'src/app/services/products.service';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-products',
@@ -6,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  heartIcon = faHeart;
+  products:Product[] = [];
 
-  constructor() { }
+  constructor(private productService:ProductsService) {
+    this.products = productService.getAll();
+   }
 
   ngOnInit(): void {
   }

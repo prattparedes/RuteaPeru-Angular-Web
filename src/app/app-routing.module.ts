@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './components/blog/blog.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'more', component: MorePageComponent },
   { path: 'blog', component:  BlogComponent},
   { path: 'store', component: ProductsComponent },
+  { path: 'store/:id', component: ProductsComponent },
   { path: '**', component: HeaderComponent },
 ];
 

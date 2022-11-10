@@ -19,7 +19,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './components/ui/carousel/carousel.component';
 import { LandingbodyComponent } from './components/ui/landingbody/landingbody.component';
 import { TravelPageComponent } from './components/travel-page/travel-page.component';
-import { MorePageComponent } from './components/more-page/more-page.component'
+import { MorePageComponent } from './components/more-page/more-page.component';
+
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { MorePageComponent } from './components/more-page/more-page.component'
     MatIconModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
+    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
