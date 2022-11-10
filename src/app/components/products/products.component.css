@@ -79,7 +79,7 @@ li a img {
 
 .favorite {
     position: absolute;
-    top: 0.5rem;
+    top: -220px;
     right: 1rem;
     font-size: 1.2rem;
 }
@@ -88,8 +88,11 @@ li a img {
     color: gray;
 }
 
-.stars {
-    margin-bottom: 0.2rem;
+star-rating {
+    display: flex;
+    position: relative;
+    left: -6px;
+    top: 2px;
 }
 
 .product__price {

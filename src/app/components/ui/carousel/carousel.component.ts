@@ -32,7 +32,10 @@ export class CarouselComponent implements OnInit {
       i.id = index;
       i.marginLeft = 0;
     });
-    console.log(this.items[0].title);
+
+    setInterval(() => {
+      this.setNext()
+    }, 4000)
   }
 
   setCurrentPosition(position: number) {
@@ -65,4 +68,5 @@ export class CarouselComponent implements OnInit {
     this.items.find((i) => i.id === 0)!.marginLeft = finalPercentage;
     this.currentPosition = backPosition;
   }
+
 }

@@ -23,6 +23,7 @@ import { MorePageComponent } from './components/more-page/more-page.component';
 
 
 import { SearchComponent } from './search/search.component';
+import { StarRatingModule } from 'angular-star-rating';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SearchComponent } from './search/search.component';
     MatIconModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
+    StarRatingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

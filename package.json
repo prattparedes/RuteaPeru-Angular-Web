@@ -26,6 +26,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "angular-font-awesome": "^3.1.2",
+    "angular-star-rating": "^6.0.0",
     "font-awesome": "^4.7.0",
     "ngx-owl-carousel-o": "^14.0.1",
     "rxjs": "~7.5.0",
