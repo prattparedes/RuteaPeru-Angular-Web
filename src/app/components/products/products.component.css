@@ -32,6 +32,11 @@
 
 /** Products List */
 
+#products__list {
+    background-color: rgba(4, 53, 122, 0.24);
+    padding: 60px 0;
+}
+
 ul {
     display: flex;
     justify-content: center;
@@ -42,6 +47,7 @@ ul {
 }
 
 li a{
+    background-color: white;
     height: 22.5rem;
     width: 20rem;
     border: 1px solid var(--rutea-color);
@@ -61,6 +67,7 @@ li a:hover {
 li a img {
     object-fit: cover;
     height: 14.5rem;
+    border-bottom: 1px solid var(--rutea-color);
 }
 
 .product__content {
