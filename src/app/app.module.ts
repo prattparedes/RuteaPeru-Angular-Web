@@ -22,6 +22,7 @@ import { TravelPageComponent } from './components/travel-page/travel-page.compon
 import { MorePageComponent } from './components/more-page/more-page.component';
 
 import { RatingModule } from 'ng-starrating';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { RatingModule } from 'ng-starrating';
     LandingbodyComponent,
     TravelPageComponent,
     MorePageComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

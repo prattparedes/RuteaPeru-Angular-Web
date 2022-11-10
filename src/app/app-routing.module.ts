@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'more', component: MorePageComponent },
   { path: 'blog', component:  BlogComponent},
   { path: 'store', component: ProductsComponent },
-  { path: 'store/:id', component: ProductsComponent },
+  { path: 'store/:searchTerm', component: ProductsComponent },
   { path: '**', component: HeaderComponent },
 ];
 

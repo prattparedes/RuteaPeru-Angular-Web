@@ -2,21 +2,29 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
   heartIcon = faHeart;
-  products:Product[] = [];
+  products: Product[] = [];
 
-  constructor(private productService:ProductsService) {
-    this.products = productService.getAll();
-   }
-
-  ngOnInit(): void {
+  constructor(
+    private productService: ProductsService,
+    activatedRoute: ActivatedRoute
+  ) {
+    activatedRoute.params.subscribe((params) => {
+      if (params['searchTerm'])
+        this.products = this.productService.getAllProductsBySearchTerm(
+          params['searchTerm']
+        );
+      else this.products = productService.getAll();
+    });
   }
 
+  ngOnInit(): void {}
 }
