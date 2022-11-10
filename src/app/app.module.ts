@@ -21,7 +21,7 @@ import { LandingbodyComponent } from './components/ui/landingbody/landingbody.co
 import { TravelPageComponent } from './components/travel-page/travel-page.component';
 import { MorePageComponent } from './components/more-page/more-page.component';
 
-import { RatingModule } from 'ng-starrating';
+
 import { SearchComponent } from './search/search.component';
 
 @NgModule({
@@ -48,7 +48,6 @@ import { SearchComponent } from './search/search.component';
     MatIconModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
