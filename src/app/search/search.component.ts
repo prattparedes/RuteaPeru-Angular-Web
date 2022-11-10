@@ -18,6 +18,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {}
 
   search(term: string) {
-    if (term) this.router.navigateByUrl('/store/' + term);
+    if (term) this.router.navigateByUrl('/store/' + term)
+    else this.router.navigateByUrl('/store')
   }
 }
