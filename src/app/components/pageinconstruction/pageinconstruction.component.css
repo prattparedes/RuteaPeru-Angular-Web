@@ -1,0 +1,53 @@
+.container {
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > img {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    z-index: -1;
+}
+
+.description {
+    border-radius: 20px;
+    background: white;
+    border: 1px solid var(--rutea-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    padding: 36px;
+}
+
+.description h2{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.description p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.description button {
+    margin-top: 20px;
+    border: 1px solid white;
+    padding: 12px;
+    color: var(--rutea-color);
+}
+
+.description button:hover {
+    border: 1px solid var(--rutea-color);
+}
+
+fa-icon {
+    font-size: 36px;
+}

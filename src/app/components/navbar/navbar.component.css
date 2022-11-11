@@ -26,6 +26,7 @@
   justify-content: space-between;
   max-width: 750px;
   min-width: 600px;
+  align-items: center;
 }
 
 nav {
@@ -66,4 +67,25 @@ nav {
 
 .nav__cart {
   color: var(--rutea-color);
+}
+
+li > a {
+  position: relative;
+}
+
+.nav__cart--quantity {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: white;
+  padding: 0.16rem;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  top: 4.5px;
+  left: 8px;
 }

@@ -22,6 +22,8 @@ export class ProductsComponent implements OnInit {
         this.products = this.productService.getAllProductsBySearchTerm(
           params['searchTerm']
         );
+      else if (params['tag'])
+        this.products = this.productService.getAllFoodsByTag(params['tag']);
       else this.products = productService.getAll();
     });
   }

@@ -13,7 +13,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.48);
+  background: rgba(0, 0, 0, 0.28);
+  transition: all 300ms ease;
 }
 
 .carousel__content {
@@ -36,6 +37,17 @@
   background-size: cover;
   background-position: center;
   transition: 1s all ease-in;
+  animation: Sizing 100ms ease-in-out infinite;
+}
+
+@keyframes Sizing {
+  0% {
+    background-clip: padding-box;
+  }
+
+  100% {
+    background-clip: border-box;
+  }
 }
 
 .carousel__content-item > h1 {

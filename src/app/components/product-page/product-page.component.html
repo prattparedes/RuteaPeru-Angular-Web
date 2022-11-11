@@ -1,0 +1,29 @@
+<div class="product__container">
+    <img [src]="product.imageUrl" [alt]="product.name">
+    <div class="product__details">
+        <div class="product__header">
+            <span class="product__name">
+                {{product.name}}
+            </span>
+            <span class="favorite {{product.favorite? '':'not'}}"><fa-icon [icon]="heartIcon"></fa-icon></span>
+        </div>
+        <div class="product__rating">
+            <star-rating [starType]="'svg'" [rating]="product.stars" staticColor="ok"></star-rating>
+        </div>
+        <div class="product__brand">
+            <span>{{product.brand}}</span>
+        </div>
+
+        <div class="product__tags">
+            <a *ngFor="let tag of product.tags" routerLink="/tag/{{tag}}">
+                {{tag}}
+            </a>
+        </div>
+
+        <div class="product__price">
+            <strong><span>S/.{{product.price}}</span></strong>
+        </div>
+
+        <button (click)="addToCart()">Add To Cart</button>
+    </div>
+</div>

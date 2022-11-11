@@ -1,0 +1,56 @@
+<section id="cart">
+    <img src="../../../assets/cartBG.jpg" alt="">
+    <div class="cart__header">
+        <h1>RESUMEN DE TU COMPRA</h1>
+    </div>
+    <div class="cart__empty" *ngIf="cart.items.length === 0">
+        <div class="containerEmpty">
+            <h2>Parece que no hay artículos en tu carrito :(</h2>
+            <p>¡Regresa a la tienda a agregar más productos!</p>
+            <button routerLink="/store" class="empty__btn">RUTEA PERÚ STORE</button>
+        </div>
+    </div>
+    <div class="container" *ngIf="cart.items.length > 0">
+        <ul>
+            <li *ngFor="let cartItem of cart.items">
+                <div>
+                    <img [src]="cartItem.product.imageUrl" [alt]="cartItem.product.name" />
+                </div>
+                <div>
+                    <a routerLink="/product/{{cartItem.product.id}}">
+                        {{cartItem.product.name}}
+                    </a>
+                </div>
+                <div>
+                    <select #quantitySelect [value]="cartItem.quantity"
+                        (change)="changeQuantity(cartItem, quantitySelect.value)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div>
+                    S/. {{cartItem.price}}
+                </div>
+                <div>
+                    <button class="cart__removeBtn" (click)="removeFromCart(cartItem)">
+                        Remover
+                    </button>
+                </div>
+            </li>
+        </ul>
+        <div class="checkout">
+            <div>
+                <div class="checkout__count">
+                    {{cart.totalCount}}
+                </div>
+                <div class="checkout__totalPrice">
+                    S/. {{cart.totalPrice}}
+                </div>
+            </div>
+            <a href="">Proceder</a>
+        </div>
+    </div>
+</section>

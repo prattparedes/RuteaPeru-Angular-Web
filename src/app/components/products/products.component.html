@@ -9,9 +9,10 @@
 </section>
 <section id="products__list">
     <app-search></app-search>
+    <app-tags></app-tags>
     <ul>
         <li *ngFor="let product of products">
-            <a routerLink="/store/{{product.id}}">
+            <a routerLink="/product/{{product.id}}">
                 <img [src]='product.imageUrl' [alt]='product.name'>
                 <div class="product__content">
                     <div class="product__name">

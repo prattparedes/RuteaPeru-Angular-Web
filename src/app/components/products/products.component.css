@@ -65,7 +65,7 @@ li a:hover {
 }
 
 li a img {
-    object-fit: cover;
+    object-fit: contain;
     height: 14.5rem;
     border-bottom: 1px solid var(--rutea-color);
 }

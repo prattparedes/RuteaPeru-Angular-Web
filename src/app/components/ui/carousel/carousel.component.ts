@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { ICarouselItem } from './Icarousel-item.metadata';
 import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +8,7 @@ import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent implements OnInit, OnDestroy {
   chevronLeft = faChevronCircleLeft;
   chevronRight = faChevronCircleRight;
 
@@ -23,6 +23,8 @@ export class CarouselComponent implements OnInit {
   public finalHeight: string | number = 0;
   public currentPosition = 0;
 
+  autoplay: any;
+
   constructor() {
     this.finalHeight = this.isFullScreen ? '100vh' : `${this.height}px`;
   }
@@ -33,9 +35,13 @@ export class CarouselComponent implements OnInit {
       i.marginLeft = 0;
     });
 
-    setInterval(() => {
+    this.autoplay = setInterval(() => {
       this.setNext()
-    }, 4000)
+    }, 6000)
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.autoplay)
   }
 
   setCurrentPosition(position: number) {
@@ -53,10 +59,16 @@ export class CarouselComponent implements OnInit {
     }
     this.items.find((i) => i.id === 0)!.marginLeft = finalPercentage;
     this.currentPosition = nextPosition;
+
+    clearInterval(this.autoplay)
+    setTimeout(() => {
+      this.autoplay = setInterval(() => {
+        this.setNext()
+      }, 8000)
+    })
   }
 
   setBack() {
-    console.log('back');
     let finalPercentage = 0;
     let backPosition = this.currentPosition - 1;
     if (backPosition >= 0) {
@@ -67,6 +79,13 @@ export class CarouselComponent implements OnInit {
     }
     this.items.find((i) => i.id === 0)!.marginLeft = finalPercentage;
     this.currentPosition = backPosition;
+
+    clearInterval(this.autoplay)
+    setTimeout(() => {
+      this.autoplay = setInterval(() => {
+        this.setNext()
+      }, 8000)
+    })
   }
 
 }

@@ -24,6 +24,10 @@ import { MorePageComponent } from './components/more-page/more-page.component';
 
 import { SearchComponent } from './search/search.component';
 import { StarRatingModule } from 'angular-star-rating';
+import { TagsComponent } from './components/ui/tags/tags.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
+import { PageinconstructionComponent } from './components/pageinconstruction/pageinconstruction.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,10 @@ import { StarRatingModule } from 'angular-star-rating';
     TravelPageComponent,
     MorePageComponent,
     SearchComponent,
+    TagsComponent,
+    ProductPageComponent,
+    CartPageComponent,
+    PageinconstructionComponent,
   ],
   imports: [
     BrowserModule,

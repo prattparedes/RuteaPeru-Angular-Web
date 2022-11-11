@@ -22,8 +22,8 @@
                 <a class="nav__link nav__link--hover" routerLink="/store">Rutea Perú Store</a>
             </li>
             <li>
-                <a routerLink="/">
-                    <mat-icon class="nav__cart">shopping_cart</mat-icon>
+                <a routerLink="/cart">
+                    <mat-icon class="nav__cart">shopping_cart</mat-icon><span class="nav__cart--quantity" *ngIf="cartQuantity">{{cartQuantity}}</span>
                 </a>
             </li>
         </ul>

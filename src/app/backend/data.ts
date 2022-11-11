@@ -1,4 +1,5 @@
 import { Product } from '../models/product';
+import { Tag } from '../models/tag';
 
 export const sample_products: Product[] = [
   {
@@ -6,7 +7,7 @@ export const sample_products: Product[] = [
     name: 'Fjällräven Gorra 1960 Logo Långtradarkeps',
     brand: 'Fjällräven',
     price: 120,
-    tags: ['gorra', 'ropa'],
+    tags: ['gorras', 'ropa'],
     color: 'black',
     favorite: true,
     stars: 4.0,
@@ -18,7 +19,7 @@ export const sample_products: Product[] = [
     name: 'Columbia Chaleco Silver Ridge II',
     brand: 'Columbia',
     price: 180,
-    tags: ['chaleco', 'ropa'],
+    tags: ['chalecos', 'ropa'],
     color: 'blue',
     favorite: false,
     stars: 3.0,
@@ -33,7 +34,7 @@ export const sample_products: Product[] = [
     tags: ['gps', 'electrónica'],
     color: 'metal',
     favorite: true,
-    stars: 50.,
+    stars: 50,
     imageUrl:
       'https://www.tradeinn.com/f/13748/137488838/twonav-gps-aventura-2.jpg',
   },
@@ -42,7 +43,7 @@ export const sample_products: Product[] = [
     name: 'Botas Senderismo Terrex Swift R2 Mid Goretex',
     brand: 'Adidas',
     price: 460,
-    tags: ['bota', 'ropa'],
+    tags: ['botas','zapatos', 'ropa'],
     color: 'blue',
     favorite: true,
     stars: 4.0,
@@ -54,11 +55,19 @@ export const sample_products: Product[] = [
     name: 'Brandit Pantalones Pure Vintage',
     brand: 'Brandit',
     price: 145.99,
-    tags: ['pantalon', 'ropa'],
+    tags: ['pantalones', 'ropa'],
     color: 'green',
-    favorite: true,
+    favorite: false,
     stars: 5.0,
     imageUrl:
       'https://www.tradeinn.com/f/13802/138023065/brandit-pantalones-pure-vintage.jpg',
   },
+];
+
+export const sample_tags: Tag[] = [
+  { name: 'Todos', count: 5 },
+  { name: 'Ropa', count: 4 },
+  { name: 'Pantalones', count: 1 },
+  { name: 'Zapatos', count: 1 },
+  { name: 'Electrónica', count: 1 },
 ];
