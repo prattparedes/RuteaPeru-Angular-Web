@@ -37,17 +37,6 @@
   background-size: cover;
   background-position: center;
   transition: 1s all ease-in;
-  animation: Sizing 100ms ease-in-out infinite;
-}
-
-@keyframes Sizing {
-  0% {
-    background-clip: padding-box;
-  }
-
-  100% {
-    background-clip: border-box;
-  }
 }
 
 .carousel__content-item > h1 {
@@ -109,4 +98,19 @@
 .carousel__steps-step-active {
   opacity: 0.7;
   background: #fff;
+}
+
+
+@media (max-width:480px) {
+  .carousel__content-item > h1 {
+    font-size: 24px;
+  }
+
+  .carousel__content-item > p {
+    font-size: 16px;
+  }
+
+  .carousel__btns > fa-icon {
+    font-size: 32px;
+  }
 }

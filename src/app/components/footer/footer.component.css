@@ -5,6 +5,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -27,9 +29,27 @@ a {
 
 .footer__list {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .footer__list > li {
-  margin: 0 20px;
+  margin: 10px 20px;
+}
+
+@media (max-width: 480px) {
+  .footer__list > li {
+    margin: 8px 10px;
+  }
+
+  .container {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer__list {
+    margin-top: 20px;
+  }
 }
