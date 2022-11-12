@@ -41,14 +41,4 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
     link: '/',
     image: 'assets/Carrusel4.jpg',
   },
-  {
-    id: 5,
-    title: {
-      first: 'TITULO',
-      second: 'Principal',
-    },
-    subtitle: 'Esto es una gran descripción',
-    link: '/',
-    image: 'assets/Carrusel5.jpg',
-  },
 ];

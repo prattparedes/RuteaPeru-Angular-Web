@@ -9,11 +9,12 @@
 }
 
 .products__bg {
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
-    top: -50%;
     z-index: -1;
     width: 100%;
+    height: 100%;
+    filter: brightness(0.75);
 }
 
 .products__header--description > h1 {

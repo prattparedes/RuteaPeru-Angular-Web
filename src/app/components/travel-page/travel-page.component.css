@@ -27,9 +27,14 @@
   text-align: center;
 }
 
+.travel__header > h1 {
+  font-size: 32px;
+}
+
 .travel__header > h3 {
   max-width: 800px;
   margin: 12px auto;
+  font-size: 24px;
 }
 
 .travels {
@@ -92,24 +97,14 @@
 
 .travel__img {
   position: absolute;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
+  height: 100%;
   object-position: center;
   filter: brightness(0.8);
   transition: filter 200ms ease-in-out;
 }
 
-.travel__img--1 {
-  top: -80%;
-}
-
-.travel__img--2 {
-  top: -30%;
-}
-
-.travel__img--3 {
-  top: -90%;
-}
 
 .travel__location--description {
   z-index: 10;
