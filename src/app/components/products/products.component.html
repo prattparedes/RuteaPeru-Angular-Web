@@ -10,6 +10,7 @@
 <section id="products__list">
     <app-search></app-search>
     <app-tags></app-tags>
+    <app-empty-store [visible]="!products || !products.length" resetLinkText="Reiniciar búsqueda" resetLinkRoute="/store"></app-empty-store>
     <ul>
         <li *ngFor="let product of products">
             <a routerLink="/product/{{product.id}}">

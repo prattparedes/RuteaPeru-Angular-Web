@@ -28,6 +28,7 @@ import { TagsComponent } from './components/ui/tags/tags.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { PageinconstructionComponent } from './components/pageinconstruction/pageinconstruction.component';
+import { EmptyStoreComponent } from './components/ui/empty-store/empty-store.component'; 
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { PageinconstructionComponent } from './components/pageinconstruction/pag
     ProductPageComponent,
     CartPageComponent,
     PageinconstructionComponent,
+    EmptyStoreComponent,
   ],
   imports: [
     BrowserModule,

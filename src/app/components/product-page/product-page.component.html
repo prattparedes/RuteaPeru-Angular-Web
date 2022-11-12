@@ -1,4 +1,9 @@
-<div class="product__container">
+<app-empty-store
+[visible] ="!product"
+notFoundMessage="No se encontró el producto"
+resetLinkText="Regresa a la Tienda"
+resetLinkRoute="/store"></app-empty-store>
+<div *ngIf="product" class="product__container">
     <img [src]="product.imageUrl" [alt]="product.name">
     <div class="product__details">
         <div class="product__header">
