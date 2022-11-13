@@ -74,10 +74,11 @@ router.get(
   })
 );
 
-router.get('/:productId', (req, res) => {
-  const productId = req.params.productId;
-  const product = sample_products.find((product) => product.id == productId);
-  res.send(product);
-});
+router.get('/:productId', asyncHandler(
+  async (req, res) => {
+    const product = await ProductModel.findById(req.params.productId)
+    res.send(product);
+  }
+));
 
 export default router;

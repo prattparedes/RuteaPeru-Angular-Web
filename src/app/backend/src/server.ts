@@ -4,6 +4,7 @@ process.env.MONGO_URI;
 
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 
 import productRouter from '../routers/product.router';
 import { dbConnect } from './configs/database.config';
@@ -21,7 +22,12 @@ app.use(
 
 app.use('/api/products', productRouter);
 
-const port = 5000;
+app.use(express.static('public'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname,'public', 'index.html'));
+});
+
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log('website served on http://localhost:' + port);
 });
