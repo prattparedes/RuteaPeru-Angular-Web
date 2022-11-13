@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { sample_products, sample_tags } from '../src/data';
+import { sample_products, sample_tags } from '../data';
 import asyncHandler from 'express-async-handler';
 import { ProductModel } from '../models/product.model';
 const router = Router();

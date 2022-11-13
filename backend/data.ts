@@ -1,5 +1,6 @@
-import { Product } from '../../models/product';
-import { Tag } from '../../models/tag';
+import { Product } from './models/product';
+import { Tag } from './models/tag';
+
 
 export const sample_products: Product[] = [
   {

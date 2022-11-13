@@ -1,4 +1,6 @@
 import { connect, ConnectOptions } from 'mongoose';
+const dotenv = require("dotenv");
+dotenv.config();
 
 export const dbConnect = () => {
   connect(process.env.MONGO_URI!, {
