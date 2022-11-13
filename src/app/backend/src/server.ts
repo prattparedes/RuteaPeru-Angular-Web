@@ -1,6 +1,13 @@
+import dotenv from 'dotenv';
+dotenv.config();
+process.env.MONGO_URI;
+
 import express from 'express';
 import cors from 'cors';
-import { sample_products, sample_tags } from './data';
+
+import productRouter from '../routers/product.router';
+import { dbConnect } from './configs/database.config';
+dbConnect();
 
 const app = express();
 //localhost:4200
@@ -12,35 +19,7 @@ app.use(
   })
 );
 
-app.get('/api/products', (req, res) => {
-  res.send(sample_products);
-});
-
-app.get('/api/products/search/:searchTerm', (req, res) => {
-  const searchTerm = req.params.searchTerm;
-  const products = sample_products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  res.send(products);
-});
-
-app.get('/api/products/tags', (req, res) => {
-  res.send(sample_tags);
-});
-
-app.get('/api/products/tag/:tagName', (req, res) => {
-  const tagName = req.params.tagName;
-  const products = sample_products.filter((product) =>
-    product.tags?.includes(tagName)
-  );
-  res.send(products);
-});
-
-app.get('/api/products/:productId', (req, res) => {
-  const productId = req.params.productId;
-  const product = sample_products.find((product) => product.id == productId);
-  res.send(product)
-});
+app.use('/api/products', productRouter);
 
 const port = 5000;
 app.listen(port, () => {
