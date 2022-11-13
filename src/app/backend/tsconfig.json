@@ -3,7 +3,7 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "strict": true,
-    "outDir": "./build",
+    "outDir": "./built",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true
