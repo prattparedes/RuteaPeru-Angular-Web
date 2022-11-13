@@ -3,6 +3,7 @@ import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -17,14 +18,23 @@ export class ProductsComponent implements OnInit {
     private productService: ProductsService,
     activatedRoute: ActivatedRoute
   ) {
+
+    let productsObservable: Observable<Product[]>;
+    
     activatedRoute.params.subscribe((params) => {
       if (params['searchTerm'])
-        this.products = this.productService.getAllProductsBySearchTerm(
+        productsObservable = this.productService.getAllProductsBySearchTerm(
           params['searchTerm']
         );
       else if (params['tag'])
-        this.products = this.productService.getAllFoodsByTag(params['tag']);
-      else this.products = productService.getAll();
+        productsObservable = this.productService.getAllFoodsByTag(
+          params['tag']
+        );
+      else productsObservable = productService.getAll();
+
+      productsObservable.subscribe((serverProducts) => {
+        this.products = serverProducts;
+      });
     });
   }
 
