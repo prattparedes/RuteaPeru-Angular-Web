@@ -132,7 +132,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  margin-bottom: 30px;
 }
 
 .landing__content--2 {
@@ -157,6 +156,24 @@
   top: 0;
 }
 
+/* Landing 3*/
+#landing3 { 
+  height: 80vh;
+  background-color: rgba(4, 53, 122, 0.48);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.landing__content--3 > h1{
+  margin-bottom: 20px;
+}
+
+.bg__image--3 {
+  object-position: bottom;
+}
+
 /** Productos */
 #products {
   height: 90vh;
@@ -175,6 +192,7 @@
 .products__img {
   position: absolute;
   object-fit: cover;
+  object-position: bottom;
   top: 0;
   width: 100%;
   height: 100%;
