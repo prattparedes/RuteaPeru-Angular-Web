@@ -7,13 +7,13 @@
   content: "";
   background-image: url(../../../assets/travelsBG.jpg);
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.5;
+  opacity: 0.65;
   z-index: -1;
 }
 
@@ -23,18 +23,20 @@
   max-width: 1200px;
   padding-top: 60px;
   margin: 0 auto;
-  margin-bottom: 40px;
-  text-align: center;
+  margin-left: 0;
+  text-align: left;
 }
 
+
 .travel__header > h1 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .travel__header > h3 {
   max-width: 800px;
-  margin: 12px auto;
-  font-size: 24px;
+  margin: 12px 0;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .travels {
@@ -43,7 +45,7 @@
 
 .travel__location {
   background-color: white;
-  width: 90%;
+  width: 66%;
 }
 
 .travel__location--title {
