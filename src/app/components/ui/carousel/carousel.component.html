@@ -7,8 +7,12 @@
         <ng-container *ngFor="let section of items;">
             <div class="carousel__content-item"
                 [ngStyle]="{'background-image': 'url(' + section.image  + ')', 'margin-left': section.marginLeft + '%'}">
-                <h1>{{section.title!.first}}<span>{{section.title!.second}}</span></h1>
+                <h1>{{section.title!.first}} <span>{{section.title!.second}}</span></h1>
                 <p>{{section.subtitle}}</p>
+                <button *ngIf="section.id === 0" routerLink="/travel" class="carousel__btn">Ver Más</button>
+                <button *ngIf="section.id === 1" routerLink="/travel" class="carousel__btn">Ver Más</button>
+                <button *ngIf="section.id === 2" routerLink="/more" class="carousel__btn">Ver Más</button>
+                <button *ngIf="section.id === 3" routerLink="/more" class="carousel__btn">Ver Más</button>
             </div>
         </ng-container>
     </div>

@@ -114,3 +114,28 @@
     font-size: 32px;
   }
 }
+
+.carousel__btn {
+  cursor: pointer;
+  z-index: 999;
+  padding: 10px 20px;
+  margin-top: 8px;
+  border: none;
+  background-color: rgb(87, 122, 161);
+  color: white;
+  border-radius: 8px;
+  transition: all 200ms ease-in-out;
+}
+
+.carousel__btn:hover {
+  background-color: var(--rutea-color);
+  transform: scale(1.07);
+}
+
+.carousel__content-item > h1 {
+  max-width: 750px;
+}
+
+.carousel__content-item > p {
+  max-width: 600px;
+}
