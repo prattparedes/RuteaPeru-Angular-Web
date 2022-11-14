@@ -4,7 +4,7 @@
   "scripts": {
     "start": "cd backend/built && node server.js",
     "prebuild": "cd backend && npm run build",
-    "build": "npm install && ng build --configuration production"
+    "build": "npm install && ng build --configuration production && cd backend/built && node server.js"
   },
   "private": true,
   "dependencies": {
